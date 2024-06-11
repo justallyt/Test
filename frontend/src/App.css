@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+:root{
+    --primary-color: #5acccc;
+   --secondary-color: #335c6e;
+   --regular-font: "Mulish", sans-serif;
+}
+
+body{
+     font-family: var(--regular-font);
+     background: rgb(250, 250, 250);
+}
+
+/* General Styles */
+ul{
+     list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input,
+button, 
+textarea{
+     font-family: var(--regular-font);
+}
+
+::-webkit-scrollbar {
+     width: 6px;
+}
+::-webkit-scrollbar-track {
+     background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+     background: var(--primary-color); 
+       border-radius:10px;
+ }
+
+.inner-row{
+     width: 1250px;
+     margin: auto;
+}
+
+.bouncy-loader{
+     display: flex;
+     justify-content: center;
+}
+
+.bouncy-loader img{
+      width: 40px;
+      height: 40px;
+      animation: bouncy 0.5s alternate cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
+      -webkit-animation: bouncy 0.5s alternate cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
+}
+
+@keyframes bouncy{
+      from {
+              transform: translate3d(0, -10px, 0)      ;
+              -webkit-transform: translate3d(0, -10px, 0)      ;
+              -moz-transform: translate3d(0, -10px, 0)      ;
+              -ms-transform: translate3d(0, -10px, 0)      ;
+              -o-transform: translate3d(0, -10px, 0)      ;
+}
+      to{
+                transform: translate3d(0, 10px, 0)      ;
+                -webkit-transform: translate3d(0, 10px, 0)      ;
+                -moz-transform: translate3d(0, 10px, 0)      ;
+                -ms-transform: translate3d(0, 10px, 0)      ;
+                -o-transform: translate3d(0, 10px, 0)      ;
+}
+}
+
+@media(max-width: 1280px){
+     .inner-row{
+          width: 90%;
+     }
+}

@@ -1,0 +1,208 @@
+/* header styles */
+header{
+    height: 85px;
+    background-color: white;
+    border-bottom: 1px solid rgba(229, 229, 229, 0.4);
+}
+
+.header-content{
+     height: 85px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+header .logo{
+     width: 60px;
+}
+header a.action{
+        width: 180px;
+        height: 50px;
+        display: flex;
+        border: 2px solid;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 500;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        background: var(--primary-color);
+        color: white;
+}
+
+/* --end of header styles */
+
+/* Search Strip */
+.search-strip{
+       position: relative;
+}
+.search-strip-image{
+       height: 350px;
+}
+.search-strip-texts{
+       position: absolute;
+       top: 100px;
+       color: whitesmoke;
+       text-align: center;
+       left: 50%;
+       transform: translateX(-50%);
+       -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+       -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+}
+.search-strip-texts h1{
+        font-size: 50px;
+        font-weight: 800;
+}
+.search-strip-texts p{
+       font-size: 20px;
+       line-height: 1.7;
+}
+.search-strip-control{
+       width: 600px;
+       margin: auto;
+       background: white;
+       box-shadow: 0px 0px 3px -1px rgba(155, 155, 155, 0.83);
+       height: 70px;
+       margin-top: -35px;
+       position: relative;
+       border-radius: 10px;
+       -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+       -ms-border-radius: 10px;
+       -o-border-radius: 10px;
+       padding: 0 10px;
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       justify-content: center;
+}
+
+.search-strip-control input{
+      height: 100%;
+      width: 90%;
+      font-size: 16px;
+      color: rgb(68, 68, 68);
+      font-weight: 600;
+      outline: none;
+      border: 0;
+}
+.search-strip-control span{
+      font-size: 20px;
+      display: flex;
+}
+
+/* End of search strip */
+
+
+/* Books body list */
+.books-body{
+       margin-top: 40px;
+       padding-bottom: 80px;
+}
+
+.books-body-content{
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 20px;
+}
+.book-moja{
+      background-color: white;
+      padding:12px;
+      border-radius: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -o-border-radius: 25px;
+      box-shadow: 0px 0px 5px -2px gainsboro;
+      text-align: center;
+      position: relative;
+      margin-bottom: 20px;
+}
+.book-moja .book-image{
+       height: 300px;
+       border-radius: 15px;
+       -webkit-border-radius: 15px;
+       -moz-border-radius: 15px;
+       -ms-border-radius: 15px;
+       -o-border-radius: 15px;
+       overflow: hidden;
+}
+.book-moja .book-texts{
+      margin: 20px 5px 25px 5px;
+}
+.book-moja h3{
+       font-weight: 600;
+      line-height: 1.5;
+      font-size: 19px;
+      color: var(--secondary-color);
+}
+.book-moja h4{
+       font-size: 15px;
+       font-weight: 600;
+       line-height: 1.7;
+}
+.book-moja h4 span{
+       font-weight: 700;
+       font-size: 16px;
+}
+.book-moja h5{
+      font-size: 14px;
+      text-align: left;
+      font-weight: 500;
+      color: rgb(68, 68, 68);
+}
+.book-moja h5 span{
+       font-weight: 900;
+}
+
+.book-moja button{
+       position: absolute;
+       bottom: -20px;
+       width: 90px;
+       height: 40px;
+       left: 50%;
+       transform: translate(-50%, 20px);
+       -webkit-transform: translate(-50%, 20px);
+       -moz-transform: translate(-50%, 20px);
+       -ms-transform: translate(-50%, 20px);
+       -o-transform: translate(-50%, 20px);
+       border-radius: 40px;
+       -webkit-border-radius: 40px;
+       -moz-border-radius: 40px;
+       -ms-border-radius: 40px;
+       -o-border-radius: 40px;
+       border: none;
+       font-weight: 700;
+       cursor: pointer;
+       background: var(--primary-color);
+       color: white;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       opacity: 0;
+       transition: all 0.7s ease;
+       -webkit-transition: all 0.7s ease;
+       -moz-transition: all 0.7s ease;
+       -ms-transition: all 0.7s ease;
+       -o-transition: all 0.7s ease;
+}
+.book-moja:hover button{
+        opacity: 1;
+        transform: translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+        -o-transform: translate(-50%, 0);
+}
+.book-moja button span{
+       font-size: 18px;;
+       display: flex;
+}
+.book-texts-inner{
+        display: inline-flex;
+        flex-direction: column;
+}
