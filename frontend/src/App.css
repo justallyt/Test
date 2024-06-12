@@ -9,6 +9,7 @@
 :root{
     --primary-color: #5acccc;
    --secondary-color: #335c6e;
+   --auxiliary-color: #fabd33;
    --regular-font: "Mulish", sans-serif;
 }
 
@@ -65,7 +66,19 @@ textarea{
       animation: bouncy 0.5s alternate cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
       -webkit-animation: bouncy 0.5s alternate cubic-bezier(0.5, 0.05, 1, 0.5) infinite;
 }
+.error{
+     text-align: center;
+     font-size: 16px;
+}
 
+.footer{
+       border-top: 1px solid rgba(212, 218, 220, 0.474);
+       padding: 20px 0;
+       text-align: center;
+}
+.footer p{
+      font-size: 13px;
+}
 @keyframes bouncy{
       from {
               transform: translate3d(0, -10px, 0)      ;

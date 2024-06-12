@@ -61,9 +61,12 @@ header a.action{
        font-size: 20px;
        line-height: 1.7;
 }
-.search-strip-control{
+.search-strip-wrapper{
        width: 600px;
        margin: auto;
+       position: relative;
+}
+.search-strip-control{
        background: white;
        box-shadow: 0px 0px 3px -1px rgba(155, 155, 155, 0.83);
        height: 70px;
@@ -94,6 +97,82 @@ header a.action{
       font-size: 20px;
       display: flex;
 }
+.search-results-wrapper{
+       position: absolute;
+        background: white;
+        width: 100%;
+        z-index: 99;
+        max-height: 200px;
+        overflow-y: scroll;
+        top: 70px;
+        padding: 10px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        box-shadow: 0px 0px 3px -1px rgba(155, 155, 155, 0.83);
+}
+
+.placeholder{
+        font-size: 15px;
+        text-align: center;
+        margin: 10px 0;
+}
+
+.result-moja{
+       display: flex;
+       gap: 5px;
+       width: 100%;
+       margin-bottom: 10px;
+}
+.result-moja img{
+        width: 45px;
+        height: 45px;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+}
+
+.result-moja .results-texts{
+       display: flex;
+       align-items: flex-end;
+       width: 100%;
+       justify-content: space-between;
+}
+.results-texts h3{
+        font-size: 16px;
+}
+.results-texts p{
+       font-size: 13px;
+}
+.results-texts .add-btn{
+       width: 60px;
+       display: flex;
+       justify-content: center;
+       font-size: 12px;
+       cursor: pointer;
+       border-radius: 30px;
+       -webkit-border-radius: 30px;
+       -moz-border-radius: 30px;
+       -ms-border-radius: 30px;
+       -o-border-radius: 30px;
+       background: var(--primary-color);
+       color: whitesmoke;
+       padding: 2px 0;
+       border: none;
+}
+.results-texts .check{
+       color: var(--auxiliary-color);
+       display: flex;
+       align-items: center;
+       gap: 3px;;
+}
+.results-texts .check span{
+       display: flex;
+}
 
 /* End of search strip */
 
@@ -102,11 +181,12 @@ header a.action{
 .books-body{
        margin-top: 40px;
        padding-bottom: 80px;
+       min-height: 90vh;
 }
 
 .books-body-content{
        display: grid;
-       grid-template-columns: repeat(4, 1fr);
+       grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
        gap: 20px;
 }
 .book-moja{
@@ -159,50 +239,47 @@ header a.action{
        font-weight: 900;
 }
 
-.book-moja button{
-       position: absolute;
-       bottom: -20px;
-       width: 90px;
-       height: 40px;
-       left: 50%;
-       transform: translate(-50%, 20px);
-       -webkit-transform: translate(-50%, 20px);
-       -moz-transform: translate(-50%, 20px);
-       -ms-transform: translate(-50%, 20px);
-       -o-transform: translate(-50%, 20px);
-       border-radius: 40px;
-       -webkit-border-radius: 40px;
-       -moz-border-radius: 40px;
-       -ms-border-radius: 40px;
-       -o-border-radius: 40px;
-       border: none;
-       font-weight: 700;
-       cursor: pointer;
-       background: var(--primary-color);
-       color: white;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       opacity: 0;
-       transition: all 0.7s ease;
-       -webkit-transition: all 0.7s ease;
-       -moz-transition: all 0.7s ease;
-       -ms-transition: all 0.7s ease;
-       -o-transition: all 0.7s ease;
-}
-.book-moja:hover button{
-        opacity: 1;
-        transform: translate(-50%, 0);
-        -webkit-transform: translate(-50%, 0);
-        -moz-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-        -o-transform: translate(-50%, 0);
-}
-.book-moja button span{
-       font-size: 18px;;
-       display: flex;
-}
 .book-texts-inner{
         display: inline-flex;
         flex-direction: column;
+}
+
+@media(max-width: 768px){
+        .search-strip-wrapper{
+                width: 85%;
+        }
+        .search-strip-texts{
+              width: 90%;
+               top: 50%;
+               transform: translate(-50%, -50%) ;
+               -webkit-transform: translate(-50%, -50%) ;
+               -moz-transform: translate(-50%, -50%) ;
+               -ms-transform: translate(-50%, -50%) ;
+               -o-transform: translate(-50%, -50%) ;
+}
+.search-strip-texts h1{
+        font-size: 40px;;
+}
+.search-strip-texts p{
+        font-size: 17px;
+}
+}
+
+@media(max-width: 480px){
+       header a.action{
+              width: 120px;
+              font-size: 12px;
+              height: 40px;
+       }
+       .result-moja .results-texts{
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 5px;
+       }
+}
+
+@media(max-width: 320px){
+       .books-body-content{
+              grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+       }
 }

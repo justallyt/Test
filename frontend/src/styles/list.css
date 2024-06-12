@@ -1,0 +1,97 @@
+.reading-row{
+     width: 900px;
+     margin: 30px auto 80px auto;
+     min-height: 90vh;
+}
+
+.reading-row h2{
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 20px;
+      font-weight: 500;
+      border-bottom: 1px solid rgb(233, 242, 242);
+      padding-bottom: 10px;
+}
+.book-list-moja{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(232, 239, 238);
+}
+
+.book-list-moja:last-child{
+       border-bottom: none;
+}
+.book-list-moja .book-left-col{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.book-list-moja img{
+      width: 50px;
+      height: 50px;
+      border-radius: 7px;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      -ms-border-radius: 7px;
+      -o-border-radius: 7px;
+}
+
+.book-list-moja h3{
+     font-size: 17px;
+     font-weight:  600;
+}
+
+.book-list-moja p{
+    font-size: 14px;
+    margin-top: 2px;
+    font-weight: 500;
+}
+
+.book-list-moja button{
+     width: 120px;
+     cursor: pointer;
+     height: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 3px;
+     font-weight: 600;
+     border-radius: 40px;
+     -webkit-border-radius: 40px;
+     -moz-border-radius: 40px;
+     -ms-border-radius: 40px;
+     -o-border-radius: 40px;
+     border:none;
+}
+.book-list-moja button span{
+     display: flex;
+     color: red;
+}
+
+.reading-row p.intro{
+     text-align: center;
+     font-size: 15px;
+}
+
+@media(max-width: 1000px){
+      .reading-row{
+            width: 90%;
+      }
+}
+
+@media(max-width: 480px){
+      .reading-row h2{
+            font-size: 25px;
+      }
+      .book-list-moja{
+            flex-direction: column;
+            gap: 10px;
+      }
+      .book-list-moja button{
+             margin-left: 4%;
+      }
+}
